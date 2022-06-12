@@ -84,18 +84,25 @@
 <script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
 <script type="text/javascript" src="/doks-theme/assets/js/scripts.min.js"></script>
 <script>
+async function sha256(text){
+		const uint8  = new TextEncoder().encode(text)
+		const digest = await crypto.subtle.digest('SHA-256', uint8)
+		return Array.from(new Uint8Array(digest)).map(v => v.toString(16).padStart(2,'0')).join('')
+}
 $(() => {
 		const $pass = $("#pass");
 		const $enter = $("#enter");
-		$enter.on("click", () => {
-					fetch(`/pages/${$pass.val()}`)
-				  .then(data => {
-						if (data.status == 404) {
-							alert('パスワードが異なります。');
-						} else {
-							window.location.href = `/pages/${$pass.val()}`;
-						}
-					})
+		$enter.on("click", async () => {
+				sha256($pass.val()).then((hash) => {
+						fetch(`/${hash}/homepage`)
+					  .then((data) => {
+								if (data.status == 404) {
+										alert('パスワードが異なります。');
+								} else {
+										window.location.href = `/${hash}/homepage`;
+								}
+						})
+				})
 		})
 		$pass.on("keydown", e => {
 				if(e.keyCode === 13) $enter.trigger("click");
