@@ -5,7 +5,11 @@ keywords:
 
 # Hero section
 title: chocolatlumiere document
-description: パスワードを入力してください。
+description: <p id="title" class="text-center text-7xl"></p>
+<py-script output="title">
+    title = 'I love PyScript'
+    pyscript.write('title', title)
+</py-script>
 buttons:
     - content: Confirm
       url: 'homepage'
