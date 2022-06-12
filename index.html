@@ -79,6 +79,7 @@
 
 
 <script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/store.legacy.min.js"></script>
 <script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
 <script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
 <script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
@@ -90,6 +91,9 @@ async function sha256(text){
 		return Array.from(new Uint8Array(digest)).map(v => v.toString(16).padStart(2,'0')).join('')
 }
 $(() => {
+		if (store.get("isLoggedIn")) {
+				window.location.href = `/${store.get("isLoggedIn")}/homepage`
+		}
 		const $pass = $("#pass");
 		const $enter = $("#enter");
 		$enter.on("click", async () => {
@@ -99,6 +103,7 @@ $(() => {
 								if (data.status == 404) {
 										alert('パスワードが異なります。');
 								} else {
+										store.set("isLoggedIn",hash);
 										window.location.href = `/${hash}/homepage`;
 								}
 						})
