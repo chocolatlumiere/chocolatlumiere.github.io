@@ -29,11 +29,9 @@
 
 									<input id="pass" type="passsword"></input>
 
-									<a href="pages/homepage" id="enter" class="btn btn--dark btn--rounded btn--w-icon">
-
+									<a id="enter" class="btn btn--dark btn--rounded btn--w-icon">
 										Confirm
 									</a>
-
 
 							</div><!-- /.align-inner -->
 						</div><!-- /.align-container -->
@@ -87,25 +85,20 @@
 <script type="text/javascript" src="/doks-theme/assets/js/scripts.min.js"></script>
 <script>
 $(() => {
-    const $pass = $("#pass");
-    const $enter = $("#enter");
-    $enter.on("click", () => {
-        $.ajax({
-            url: $pass.val() + ".html"
-        }).then(html => {
-            $("body").html(html);
-						console.log('ok')
-        }).catch(() => {
-            alert("パスワード認証に失敗しました");
-  $pass.val("");
-        });
-    })
-    $pass.on("keydown", e => {
-        if(e.keyCode === 13) $enter.trigger("click");
-    });
+		const $pass = $("#pass");
+		const $enter = $("#enter");
+		$enter.on("click", () => {
+				try {
+					window.location.href = /pages/$pass.val();
+				} catch {
+					alert("パスワード認証に失敗しました");
+				};
+		})
+		$pass.on("keydown", e => {
+				if(e.keyCode === 13) $enter.trigger("click");
+		});
 });
 </script>
-
 
 
 	</body>
