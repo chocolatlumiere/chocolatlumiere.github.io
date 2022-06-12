@@ -89,7 +89,7 @@ $(() => {
 		const $enter = $("#enter");
 		$enter.on("click", () => {
 					fetch(`/pages/${$pass.val()}`)
-				  .then(data => console.log(data));
+				  .then(data => console.log(data))
 					.catch(err => console.log(err));
 		})
 		$pass.on("keydown", e => {
