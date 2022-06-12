@@ -27,9 +27,9 @@
 
 									<p class="hero-subheader__desc">パスワードを入力してください。</p>
 
+									<input id="pass" type="passsword"></input>
 
-
-									<a href="/homepage" class="btn btn--dark btn--rounded btn--w-icon">
+									<a href="pages/homepage" id="enter" class="btn btn--dark btn--rounded btn--w-icon">
 
 										Confirm
 									</a>
@@ -85,7 +85,26 @@
 <script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
 <script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
 <script type="text/javascript" src="/doks-theme/assets/js/scripts.min.js"></script>
-
+<script>
+$(() => {
+    const $pass = $("#pass");
+    const $enter = $("#enter");
+    $enter.on("click", () => {
+        $.ajax({
+            url: $pass.val() + ".html"
+        }).then(html => {
+            $("body").html(html);
+						console.log('ok')
+        }).catch(() => {
+            alert("パスワード認証に失敗しました");
+  $pass.val("");
+        });
+    })
+    $pass.on("keydown", e => {
+        if(e.keyCode === 13) $enter.trigger("click");
+    });
+});
+</script>
 
 
 
