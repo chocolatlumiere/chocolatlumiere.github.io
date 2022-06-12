@@ -8,7 +8,7 @@ title: chocolatlumiere document
 description: パスワードを入力してください。
 buttons:
     - content: Confirm
-      url: 'homepage'
+      url: '/homepage'
       external_url: false
 ---
 
