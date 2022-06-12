@@ -8,7 +8,7 @@ title: Project name
 description: Project description
 buttons:
     - content: Button
-      url: '#'
+      url: '404.md'
       external_url: false
     - icon: github
       content: Button with icon
