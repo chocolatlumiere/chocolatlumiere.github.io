@@ -1,31 +1,23 @@
----
+<head>
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
 # Page settings
 layout: homepage
 keywords:
 
 # Hero section
-title: Project name
-description: Project description
+title: chocolatlumiere document
+description: パスワードを入力してください。
 buttons:
-    - content: Button
-      url: '404.md'
+    - content: Confirm
+      url: 'homepage'
       external_url: false
-    - icon: github
-      content: Button with icon
-      url: '#'
-      external_url: true
 
-# Author box
-author:
-    title: About Author
-    title_url: '#'
-    external_url: true
-    description: Author description
-
-# Grid navigation
-grid_navigation:
-    - title: Grid navigation
-      excerpt: Section description
-      cta: Read more
-      url: '#'
----
+<main class="py-5 grid gap-y-4 grid-cols-1 place-items-center">
+    <p id="title" class="text-center text-7xl"></p>
+</main>
+<py-script output="title">
+    title = 'I love PyScript'
+    pyscript.write('title', title)
+</py-script>
