@@ -89,7 +89,7 @@ $(() => {
 		const $enter = $("#enter");
 		$enter.on("click", () => {
 				try {
-					window.location.href = /pages/$pass.val();
+					window.location.href = `/pages/${$pass.val()}`;
 				} catch {
 					alert("パスワード認証に失敗しました");
 				};
