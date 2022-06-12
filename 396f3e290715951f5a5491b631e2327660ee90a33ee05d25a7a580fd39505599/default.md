@@ -5,8 +5,8 @@ keywords:
 comments: false
 
 # Hero section
-title: Page title
-description: Page description
+title: Markdown記法について
+description: Markdownの書き方
 
 # Micro navigation
 micro_nav: true
@@ -31,12 +31,26 @@ page_nav:
 - ゆいぽむ
 - みなるん
 
+ソースコード
+'''
+- わこ
+- ゆいぽむ
+- みなるん
+'''
+
 のように"-"を単語の頭につけるだけで実現できてしまいます。  
 また表を作成するときも、
 
 ||るなち|みゆち|
 |:---:|:---:|:---:|
 |得点|18|20|
+
+ソースコード
+'''
+||るなち|みゆち|
+|:---:|:---:|:---:|
+|得点|18|20|
+'''
 
 たったこれだけの直感的な入力で実現できます。
 そのほかにも、Markdown記法で書かれた文章に好きな装飾も加えることができます。そしてそれはいくつものファイルにまとめて適応できるので、書いた人によるブレがなくなります。
