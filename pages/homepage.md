@@ -27,7 +27,7 @@ grid_navigation:
     - title: Grid navigation1
       excerpt: Section description
       cta: Read more
-      url: './default'
+      url: '../default'
 
     - title: Grid navigation2
       excerpt: Section description
