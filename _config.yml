@@ -21,7 +21,7 @@ doks:
             - network_name: twitter
               profile_url: 'https://twitter.com/chocolatlumiere'
             - network_name: instagram
-              profile_url: '#'
+              profile_url: 'https://instagram.com/chocolatlumiere'
     google_analytics:
         tracking_code: # Add your Google Analytics tracking code to activate Google Analytics
     comments:

@@ -17,15 +17,15 @@ buttons:
 
 # Author box
 author:
-    title: Usage 使い方
+    title: 使い方
     title_url: '#'
     external_url: false
     description: このドキュメントについて
 
 # Grid navigation
 grid_navigation:
-    - title: Grid navigation1
-      excerpt: Section description
+    - title: Markdown記法について
+      excerpt: 
       cta: Read more
       url: '../default'
 

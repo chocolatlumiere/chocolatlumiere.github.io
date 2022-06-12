@@ -8,24 +8,39 @@ comments: false
 title: Page title
 description: Page description
 
-# Author box
-author:
-    title: About Author
-    title_url: '#'
-    external_url: true
-    description: Author description
-
 # Micro navigation
 micro_nav: true
 
 # Page navigation
 page_nav:
-    prev:
-        content: Previous page
-        url: '#'
     next:
         content: Next page
         url: '#'
 ---
 
-Write your markdown here ...
+## Markdown記法について
+
+何か資料を作るとき、文章を作って人に見せる機会は多いと思います。
+そのやり方は様々で、例えばメモ帳に入力したり、txtファイルを作ったり。
+しかしそれでは、文面に見出しや本文といったメリハリもなく、見づらく物足りないことが多いでしょう。
+
+また誰かと共同で作成する文書をWordで作るとなると、その書き方を共有するのはかなり難しかったりします。  
+このMarkdown記法では、HTMLをテキストエディタのように作成することが可能です。メリットとして、例えば箇条書きを作りたい時、
+
+- わこ
+- ゆいぽむ
+- みなるん
+
+のように"-"を単語の頭につけるだけで実現できてしまいます。  
+また表を作成するときも、
+
+||るなち|みゆち|
+|:---:|:---:|:---:|
+|得点|18|20|
+
+たったこれだけの直感的な入力で実現できます。
+そのほかにも、Markdown記法で書かれた文章に好きな装飾も加えることができます。そしてそれはいくつものファイルにまとめて適応できるので、書いた人によるブレがなくなります。
+
+そしてそのMarkdownファイル群をまとめて、GitHub Pages(github.io)で公開したいと考えています。GitHub Pagesとは、Markdown記法やHTMLで作成した文書を簡単にウェブサイトとして公開できるサービスです。GitHub Pagesのメリットは、複数人でこのサイトにアクセスした時、誰がどのファイルを編集したかということがわかるので、同じマニュアルを同時に作ってしまったということが起きにくくなります。
+
+![sample](/assets/sample2.png)
