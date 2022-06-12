@@ -20,7 +20,7 @@ author:
     title: Usage 使い方
     title_url: '#'
     external_url: false
-    description:
+    description: このドキュメントについて
 
 # Grid navigation
 grid_navigation:
@@ -45,7 +45,7 @@ grid_navigation:
       url: '#'
 
     - title: Grid navigation5
-      excerpt: Section description
+      excerpt:
       cta: Read more
       url: '#'
 ---

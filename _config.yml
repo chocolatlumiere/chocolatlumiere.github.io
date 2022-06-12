@@ -8,7 +8,7 @@ doks:
             image:
         nav:
             - item_name: トップ
-              item_url: '/pages/homepage'
+              item_url: '/'
             - item_name: 困った時は
               item_url: '#'
     footer:
