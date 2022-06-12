@@ -1,15 +1,11 @@
 ---
 # Page settings
-layout: default
+layout: homepage
 keywords:
 
 # Hero section
 title: chocolatlumiere document
-description: <p id="title" class="text-center text-7xl"></p>
-<py-script output="title">
-    title = 'I love PyScript'
-    pyscript.write('title', title)
-</py-script>
+description: パスワードを入力してください。
 buttons:
     - content: Confirm
       url: 'homepage'
@@ -21,8 +17,14 @@ buttons:
 <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </head>
 
-<p id="title" class="text-center text-7xl"></p>
-<py-script output="title">
-    title = 'I love PyScript'
-    pyscript.write('title', title)
+<input id="password" class="border">
+<py-button id="passtest_btn" label="confirm" pys-onClick="test_pass"></py-button>
+<p id='test'></p>
+<py-script>
+def test_pass(*ags, **kws):
+    password_element = Element("password")
+    input_word = password_element.element.value
+    pyscript.write("test","input_word : " + input_word)
+    password_element.clear()
+    Window.open('https://docs.github.com/ja/pages/getting-started-with-github-pages/creating-a-github-pages-site','_blank')
 </py-script>
