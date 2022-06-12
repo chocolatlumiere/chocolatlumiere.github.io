@@ -88,9 +88,9 @@ $(() => {
 		const $pass = $("#pass");
 		const $enter = $("#enter");
 		$enter.on("click", () => {
-					fetch(`/pages/${$pass.val()}`);
+					fetch(`/pages/${$pass.val()}`)
 				  .then(data => console.log(data));
-					.catch(err=>console.log(err));
+					.catch(err => console.log(err));
 		})
 		$pass.on("keydown", e => {
 				if(e.keyCode === 13) $enter.trigger("click");
