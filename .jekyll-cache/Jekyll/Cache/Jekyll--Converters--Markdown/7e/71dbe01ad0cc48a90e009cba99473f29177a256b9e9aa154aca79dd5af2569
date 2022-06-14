@@ -1,0 +1,55 @@
+I"�
+<h2 id="markdown記法について">Markdown記法について</h2>
+
+<p>何か資料を作るとき、文章を作って人に見せる機会は多いと思います。
+そのやり方は様々で、例えばメモ帳に入力したり、txtファイルを作ったり。
+しかしそれでは、文面に見出しや本文といったメリハリもなく、見づらく物足りないことが多いでしょう。</p>
+
+<p>また誰かと共同で作成する文書をWordで作るとなると、その書き方を共有するのはかなり難しかったりします。<br />
+このMarkdown記法では、HTMLをテキストエディタのように作成することが可能です。メリットとして、例えば箇条書きを作りたい時、</p>
+
+<ul>
+  <li>わこ</li>
+  <li>ゆいぽむ</li>
+  <li>みなるん</li>
+</ul>
+
+<p>ソースコード</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- わこ
+- ゆいぽむ
+- みなるん
+</code></pre></div></div>
+
+<p>のように”-“を単語の頭につけるだけで実現できてしまいます。<br />
+また表を作成するときも、</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">るなち</th>
+      <th style="text-align: center">みゆち</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">得点</td>
+      <td style="text-align: center">18</td>
+      <td style="text-align: center">20</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ソースコード</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>||るなち|みゆち|
+|:---:|:---:|:---:|
+|得点|18|20|
+</code></pre></div></div>
+
+<p>たったこれだけの直感的な入力で実現できます。
+そのほかにも、Markdown記法で書かれた文章に好きな装飾も加えることができます。そしてそれはいくつものファイルにまとめて適応できるので、書いた人によるブレがなくなります。</p>
+
+<p>そしてそのMarkdownファイル群をまとめて、GitHub Pages(github.io)で公開しています。GitHub Pagesとは、Markdown記法やHTMLで作成した文書を簡単にウェブサイトとして公開できるサービスです。GitHub Pagesのメリットは、複数人でこのドキュメントを編集している時、誰がどのファイルを編集したかということがわかるので、同じマニュアルを同時に作ってしまったということが起きにくくなります。</p>
+
+<p><img src="/assets/FUPu928VEAEGLlA.jpeg" alt="集合写真" /></p>
+:ET
