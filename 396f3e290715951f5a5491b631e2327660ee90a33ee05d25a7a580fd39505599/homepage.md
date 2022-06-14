@@ -18,14 +18,14 @@ buttons:
 # Author box
 author:
     title: 使い方
-    title_url: '#'
+    title_url: '../this_document/thisDocument'
     external_url: false
     description: このドキュメントについて
 
 # Grid navigation
 grid_navigation:
-    - title: Markdown記法について
-      excerpt: 
+    - title: サンプルページ
+      excerpt: ページ例
       cta: Read more
       url: '../default'
 

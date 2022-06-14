@@ -3,7 +3,7 @@
 	position: relative;
 	display: block;
 	position: relative;
-	margin-top: 25px;
+	margin-top: 21px;
 	}
 	.aa-input-search {
 	width: 300px;
@@ -121,40 +121,34 @@
 <script>
 	const client = algoliasearch('GN0YG2HWUS', '5b80b6449b05614647a52ab4ea027fff');
 	const index = client.initIndex('chocolatlumiere');
-
 	autocomplete(
 	'#aa-search-input',
 	{ hint: false },
 	{
-		source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
+		source: autocomplete.sources.hits(index, {hitsPerPage: 12}),
 		//value to be displayed in input control after user's suggestion selection
 		displayKey: 'name',
 		//hash of templates used when rendering dataset
 		templates: {
 		//'suggestion' templating function used to render a single suggestion
 		suggestion: (suggestion) => {
-			console.log(suggestion);
 			return `<div><span><a id="aa-suggestion" href="${suggestion.url}">${suggestion._highlightResult.title.value}</a></span></div>`}
 		}
-	}
-	);
-
+	});
 	autocomplete(
 	'#aa-search-input-mobile',
 	{ hint: false },
 	{
-		source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
+		source: autocomplete.sources.hits(index, {hitsPerPage: 10}),
 		//value to be displayed in input control after user's suggestion selection
 		displayKey: 'name',
 		//hash of templates used when rendering dataset
 		templates: {
 		//'suggestion' templating function used to render a single suggestion
 		suggestion: (suggestion) => {
-			console.log(suggestion);
-			return `<div><span><a id="aa-suggestion" href="${suggestion.url}">${suggestion._highlightResult.title.value}</a></span></div>`}
+			return `<div><span class="suggestion-text"><a id="aa-suggestion" href="${suggestion.url}">${suggestion._highlightResult.title.value}</a></span></div>`}
 		}
-	}
-	);
+	});
 </script>
 
 
