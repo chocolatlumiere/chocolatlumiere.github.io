@@ -92,21 +92,28 @@ async function sha256(text){
 }
 $(() => {
 		if (store.get("isLoggedIn")) {
-				window.location.href = `/${store.get("isLoggedIn")}/homepage`
-		}
+			fetch(`/${store.get("isLoggedIn")}/homepage`)
+				.then((data) => {
+					if (data.status == 404) {
+						alert('パスワードが変更されました。');
+					} else {
+						window.location.href = `/${store.get("isLoggedIn")}/homepage`;
+					}
+				});
+		};
 		const $pass = $("#pass");
 		const $enter = $("#enter");
 		$enter.on("click", async () => {
 				sha256($pass.val()).then((hash) => {
-						fetch(`/${hash}/homepage`)
-					  .then((data) => {
-								if (data.status == 404) {
-										alert('パスワードが異なります。');
-								} else {
-										store.set("isLoggedIn",hash);
-										window.location.href = `/${hash}/homepage`;
-								}
-						})
+					fetch(`/${hash}/homepage`)
+					.then((data) => {
+						if (data.status == 404) {
+								alert('パスワードが異なります。');
+						} else {
+								store.set("isLoggedIn",hash);
+								window.location.href = `/${hash}/homepage`;
+						}
+					})
 				})
 		})
 		$pass.on("keydown", e => {

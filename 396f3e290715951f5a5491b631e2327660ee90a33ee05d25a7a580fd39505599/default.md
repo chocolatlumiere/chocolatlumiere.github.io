@@ -8,7 +8,7 @@ comments: false
 title: Markdown記法について
 description: Markdownの書き方
 
-# Micro navigation
+# Micro navigationq
 micro_nav: true
 
 # Page navigation
