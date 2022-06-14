@@ -4,16 +4,16 @@ layout: homepage
 keywords:
 
 # Hero section
-title: chocolat lumière
-description: document
-buttons:
-    - content: Button
-      url: '#'
-      external_url: false
-    - icon: github
-      content: Button with icon
-      url: '#'
-      external_url: true
+title: chocolat lumière document
+description: ""
+# buttons:
+#     - content: Button
+#       url: '#'
+#       external_url: false
+#     - icon: github
+#       content: Button with icon
+#       url: '#'
+#       external_url: true
 
 # Author box
 author:
