@@ -1,0 +1,59 @@
+I"�	<hr />
+
+<h2 id="markdown記法について">Markdown記法について</h2>
+
+<p>これらのドキュメントは、一部を除いてMarkdown記法というフォーマットで構成されています。
+Markdown記法の特徴は、文章の装飾が自動的に行われるので見た目の調整に取られる時間が減り、コンテンツの作成に集中できるようになります。
+もしあなたがこのドキュメントを加筆・修正する場合は、Markdown記法を用いてページを編集、追加してください。
+このページでは、Markdown記法の基本的な文法を紹介します。</p>
+
+<h4 id="箇条書き">箇条書き</h4>
+<p>Markdown記法では、HTMLをテキストエディタのように作成することが可能です。例えば箇条書きを作りたい時、</p>
+
+<ul>
+  <li>わこ</li>
+  <li>ゆいぽむ</li>
+  <li>みなるん</li>
+</ul>
+
+<p>ソースコード</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- わこ
+- ゆいぽむ
+- みなるん
+</code></pre></div></div>
+
+<p>のように<code class="language-plaintext highlighter-rouge">-</code>を単語の頭につけるだけで実現できます。</p>
+
+<h4 id="表の作成">表の作成</h4>
+<p>また表を作成するときも、</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">るなち</th>
+      <th style="text-align: center">みゆち</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">得点</td>
+      <td style="text-align: center">18</td>
+      <td style="text-align: center">20</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ソースコード</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>||るなち|みゆち|
+|:---:|:---:|:---:|
+|得点|18|20|
+</code></pre></div></div>
+
+<p>たったこれだけの直感的な入力で実現できます。</p>
+
+<p>そしてそのMarkdownファイル群をまとめて、GitHub Pages(github.io)で公開しています。GitHub Pagesは、Markdown記法やHTMLで作成した文書を簡単にウェブサイトとして公開できるサービスです。ソースをGitHubで管理することにより、誰でもこの文書を加筆・修正することができます。</p>
+
+<p>画像も挿入できます。
+<img src="/assets/FUPu928VEAEGLlA.jpeg" alt="集合写真" /></p>
+:ET
